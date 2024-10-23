@@ -1,0 +1,36 @@
+<!--Turma 88433 de Desenvolvimento de Sistemas / Senai-Dendezeiros 
+Alunos: Daniel Lucas e Kauan Nascimento -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora Simples</title>
+</head>
+<body>
+    <input type="number" id="num1" placeholder="Número 1">
+    <input type="number" id="num2" placeholder="Número 2">
+    <button onclick="calcular('soma')">Somar</button>
+    <button onclick="calcular('subtracao')">Subtrair</button>
+    <button onclick="calcular('multiplicacao')">Multiplicar</button>
+    <button onclick="calcular('divisao')">Dividir</button>
+    <p id="resultado"></p>
+
+    <script>
+        function calcular(operacao) {
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            let resultado;
+            if (operacao === 'soma') {
+                resultado = num1 + num2;
+            } else if (operacao === 'subtracao') {
+                resultado = num1 - num2;
+            } else if (operacao === 'multiplicacao') {
+                resultado = num1 * num2;
+            } else if (operacao === 'divisao') {
+                resultado = num1 / num2;
+            }
+            document.getElementById("resultado").innerHTML = "Resultado: " + resultado;
+        }
+    </script>
+</body>
+</html>
